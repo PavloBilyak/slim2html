@@ -9,7 +9,7 @@ build({
   // metafile: true,
   target: [
     'firefox111',
-    'chrome111',
+    'chrome111'
   ]
 }).then(res => {
   console.log('done!')

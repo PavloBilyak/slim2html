@@ -7,6 +7,7 @@ require 'slim'
 
 Slim::Engine.set_options pretty: true
 
+# Roda App
 class App < Roda
   plugin :public
   plugin :render, engine: 'slim'
@@ -21,11 +22,11 @@ class App < Roda
     end
 
     r.post 'slim' do
-      { output: slim_to_html(r.params['input']) }
+      { output: slim_to_html(r.params['input'], r.params['pretty']) }
     end
   end
 end
 
-def slim_to_html(str)
-  Tilt[:slim].new { str }.render
+def slim_to_html(str, pretty)
+  Slim::Template.new(pretty:) { str }.render
 end

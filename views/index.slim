@@ -14,9 +14,12 @@ body
     legend Convert Slim to HTML
     div
       label for="input" Input
-      textarea name="input" id="input" x-model="inputValue"
+      textarea#input x-model="inputValue"
       button type="button" @click="convert" Convert
+      br
+      input#pretty type="checkbox" x-model="prettyValue"
+      label for="pretty" Pretty?
     div
       label for="output" Output
-      textarea name="output" id="output" x-model="outputValue"
+      textarea#output x-model="outputValue"
   script src="/output.js"
