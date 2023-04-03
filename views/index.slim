@@ -1,25 +1,31 @@
 doctype html
 html lang="en"
 
-head
-  meta charset="utf-8"
-  meta name="viewport" content="width=device-width,initial-scale=1"
+  head
+    meta charset="utf-8"
+    meta name="viewport" content="width=device-width,initial-scale=1"
 
-  title slim2html
+    title slim2html
 
-  link rel="stylesheet" href="/output.css"
+    link rel="stylesheet" href="/output.css"
 
-body
-  fieldset x-data="data"
-    legend Convert Slim to HTML
-    div
-      label for="input" Input
-      textarea#input x-model="inputValue"
-      button type="button" @click="convert" Convert
-      br
-      input#pretty type="checkbox" x-model="prettyValue"
-      label for="pretty" Pretty?
-    div
-      label for="output" Output
-      textarea#output x-model="outputValue"
-  script src="/output.js"
+  body
+    fieldset x-data="data"
+      legend Convert Slim to HTML
+      div
+        label for="input" Input
+        textarea#input x-model="inputValue"
+        button type="button" @click="convert" Convert
+        br
+        input#pretty type="checkbox" x-model="prettyValue"
+        label for="pretty" Pretty?
+
+        input#sort_attrs type="checkbox" x-model="sortAttrsValue"
+        label for="sort_attrs" Sort attributes?
+      div [x-cloak x-show="errorValue"]
+        pre
+          code x-text="errorValue"
+      div
+        label for="output" Output
+        textarea#output x-model="outputValue"
+    script src="/output.js"
