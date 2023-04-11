@@ -1,17 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (7.0.4.3)
-      concurrent-ruby (~> 1.0, >= 1.0.2)
-      i18n (>= 1.6, < 2)
-      minitest (>= 5.1)
-      tzinfo (~> 2.0)
     ast (2.4.2)
-    concurrent-ruby (1.2.2)
-    i18n (1.12.0)
-      concurrent-ruby (~> 1.0)
     json (2.6.3)
-    minitest (5.18.0)
     nio4r (2.5.9)
     parallel (1.22.1)
     parser (3.2.2.0)
@@ -27,7 +18,7 @@ GEM
     rexml (3.2.5)
     roda (3.66.0)
       rack
-    rubocop (1.49.0)
+    rubocop (1.50.0)
       json (~> 2.3)
       parallel (~> 1.10)
       parser (>= 3.2.0.0)
@@ -39,21 +30,15 @@ GEM
       unicode-display_width (>= 2.4.0, < 3.0)
     rubocop-ast (1.28.0)
       parser (>= 3.2.1.0)
-    rubocop-performance (1.16.0)
+    rubocop-performance (1.17.1)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
-    rubocop-rails (2.18.0)
-      activesupport (>= 4.2.0)
-      rack (>= 1.1)
-      rubocop (>= 1.33.0, < 2.0)
     ruby-progressbar (1.13.0)
     slim (5.1.0)
       temple (~> 0.10.0)
       tilt (>= 2.0.6, < 2.2)
     temple (0.10.0)
     tilt (2.1.0)
-    tzinfo (2.0.6)
-      concurrent-ruby (~> 1.0)
     unicode-display_width (2.4.2)
     webrick (1.8.1)
 
@@ -67,11 +52,10 @@ DEPENDENCIES
   roda (~> 3.66)
   rubocop (~> 1.48)
   rubocop-performance (~> 1.16)
-  rubocop-rails (~> 2.18)
   slim (~> 5.1)
 
 RUBY VERSION
    ruby 3.2.2p53
 
 BUNDLED WITH
-   2.4.10
+   2.4.11
