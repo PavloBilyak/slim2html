@@ -1,11 +1,9 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
+require 'logger'
 require 'roda'
-
 require 'slim'
-
-Slim::Engine.set_options pretty: true
 
 # Roda App
 class App < Roda
@@ -13,6 +11,8 @@ class App < Roda
   plugin :render, engine: 'slim'
   plugin :json
   plugin :json_parser
+  plugin :environments
+  plugin :common_logger, Logger.new("log/#{environment}.log")
 
   route do |r|
     r.public

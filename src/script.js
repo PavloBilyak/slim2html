@@ -3,7 +3,7 @@ import Alpine from 'alpinejs'
 import 'water.css/out/dark.min.css'
 import './style.css'
 
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
   Alpine.start()
 })
 

@@ -8,8 +8,8 @@ build({
   minify: true,
   // metafile: true,
   target: [
-    'firefox111',
-    'chrome111'
+    'firefox112',
+    'chrome113'
   ]
 }).then(res => {
   console.log('done!')
