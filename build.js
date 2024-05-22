@@ -1,5 +1,6 @@
 // import fs from 'node:fs'
 import { build } from 'esbuild'
+import browserslistToEsbuild from 'browserslist-to-esbuild'
 
 build({
   entryPoints: ['src/script.js'],
@@ -7,13 +8,16 @@ build({
   bundle: true,
   minify: true,
   // metafile: true,
-  target: [
-    'firefox112',
-    'chrome113'
-  ]
-}).then(res => {
-  console.log('done!')
-  res.warnings.forEach(warn => console.warn('warning:', warn))
-  res.errors.forEach(err => console.error('error:', err))
-  // fs.writeFileSync('meta.json', JSON.stringify(res.metafile))
-}).catch(console.error)
+  target: browserslistToEsbuild(),
+})
+  .then((res) => {
+    console.log('done!')
+    for (const warn of res.warnings) {
+      console.warn('warning:', warn)
+    }
+    for (const err of res.errors) {
+      console.error('error:', err)
+    }
+    // fs.writeFileSync('meta.json', JSON.stringify(res.metafile))
+  })
+  .catch(console.error)

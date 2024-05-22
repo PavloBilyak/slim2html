@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'bundler/setup'
-require 'logger'
+# require 'logger'
 require 'roda'
 require 'slim'
 
@@ -12,7 +12,7 @@ class App < Roda
   plugin :json
   plugin :json_parser
   plugin :environments
-  plugin :common_logger, Logger.new("log/#{environment}.log")
+  # plugin :common_logger, Logger.new("log/#{environment}.log")
 
   route do |r|
     r.public
