@@ -1,4 +1,4 @@
-FROM node:20-alpine as js-build
+FROM node:20-alpine AS js-build
 
 RUN npm i -g pnpm@latest
 
@@ -34,6 +34,6 @@ RUN bundle config set --local deployment 'true' \
 COPY app.rb config.ru ./
 COPY views/ ./views/
 
-EXPOSE 3000
+EXPOSE 3001
 
-CMD ["bundle", "exec", "rackup", "-p", "3000", "-o", "0.0.0.0"]
+CMD ["bundle", "exec", "rackup", "-p", "3001", "-o", "0.0.0.0"]

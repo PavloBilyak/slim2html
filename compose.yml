@@ -1,0 +1,7 @@
+---
+
+services:
+  slim2html:
+    build: .
+    ports:
+      - "3001:3001"
