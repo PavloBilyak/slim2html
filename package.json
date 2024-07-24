@@ -6,17 +6,17 @@
   "type": "module",
   "scripts": {
     "build": "node build.js",
-    "lint": "biome check .",
-    "lint:fix": "biome check . --apply"
+    "lint": "biome check",
+    "lint:fix": "biome check --write"
   },
   "dependencies": {
-    "alpinejs": "^3.14.0",
-    "browserslist": "^4.23.0",
+    "alpinejs": "^3.14.1",
+    "browserslist": "^4.23.2",
     "browserslist-to-esbuild": "^2.1.1",
-    "esbuild": "^0.21.3",
+    "esbuild": "^0.23.0",
     "water.css": "^2.1.1"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.7.3"
+    "@biomejs/biome": "^1.8.3"
   }
 }

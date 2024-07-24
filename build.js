@@ -1,6 +1,6 @@
 // import fs from 'node:fs'
-import { build } from 'esbuild'
 import browserslistToEsbuild from 'browserslist-to-esbuild'
+import { build } from 'esbuild'
 
 build({
   entryPoints: ['src/script.js'],
